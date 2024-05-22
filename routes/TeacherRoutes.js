@@ -1,0 +1,10 @@
+import express from 'express';
+const Router = express.Router();
+import {addTeacher,deleteTeacher,loginTeacher,getTeacher,updateTeacher,getTeachers} from '../Controllers/TeacherController.js';
+Router.post('/addTeacher',addTeacher);
+Router.delete('/deleteTeacher/:id',deleteTeacher);
+Router.post('/loginTeacher',loginTeacher);
+Router.post('/getTeacher',getTeacher);
+Router.get('/getTeachers',getTeachers);
+Router.put('/updateTeacher/:id',updateTeacher);
+export default Router;
